@@ -1,0 +1,35 @@
+.nav-top{
+background:#3b5998;
+font-weight: bold;
+font-family:Verdana, Geneva, sans-serif;	
+}
+.navbar-brand{
+color:#ffffff;
+margin-left:22px !important;
+}
+
+.navbar-brand:hover {
+color:#ffffff;
+}
+
+.nav-bottom{
+background-color:#ffffff;
+}
+
+body{
+background-color:#e9ebee;
+}
+
+.welcome{
+	color:b6c0c6;	
+}
+
+footer {
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color:#e9ebee;
+color: #b6c0c6;
+text-align: center;
+}

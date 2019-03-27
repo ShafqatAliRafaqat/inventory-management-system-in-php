@@ -1,0 +1,21 @@
+<?php
+session_start();
+include("connection.php");
+$user=$_POST['user_name'];
+$pass=$_POST['user_password'];
+$check=Run("SELECT * FROM LOGIN WHERE USERNAME='$user' AND PASSWORD='$pass'");
+if(mssql_num_rows($check)>0)
+{
+$detail=mssql_fetch_object($check);
+$type=$detail->TYPE;
+$username=$detail->USERNAME;
+$_SESSION['username']=$username;
+$_SESSION['type']=$type;
+$_SESSION['mega2018']='mega2018';
+printf('<script>location.href="home.php"</script>');
+}
+else
+{
+printf('<script>location.href="index.php?id=error"</script>');
+}	
+?>
